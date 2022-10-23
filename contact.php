@@ -1,9 +1,9 @@
 <?php
 
-if (isset($_POST['submit'])) {
-  $name = $_POST['name'];
-  $subject = $_POST['subject'];
-  $mailFrom = $_POST['mail'];
+if (isset($_POST['volunteer-submit'])) {
+  $name = $_POST['volunteer-name'];
+  $subject = $_POST['volunteer-subject'];
+  $mailFrom = $_POST['volunteer-email'];
   $message = $_POST['message'];
 
   $mailTo = "info@keadigitalsolutions.co.za";
