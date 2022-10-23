@@ -1,0 +1,15 @@
+<?php
+
+if (isset($_POST['Submit'])) {
+  $name = $_POST['name'];
+  $subject = $_POST['subject'];
+  $mailFrom = $_POST['mail'];
+  $message = $_POST['message'];
+
+  $mailTo = "info@keadigitalsolutions.co.za";
+  $headers = "From: ".$mailFrom;
+  $txt = "You have recieved an email from ".$name.".\n\n".$message;
+
+  mail($mailTo, $subject, $txt, $headers);
+  header("Location: index.php?mailsend");
+}
